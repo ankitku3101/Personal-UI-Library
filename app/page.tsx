@@ -6,7 +6,7 @@ import StickyHeader from "@/components/StickyHeader";
 
 export default function Home() {
   return (
-    <div className="max-h-full max-w-full bg-custom-gradient mx-0 my-0">
+    <div className="bg-custom-gradient">
       <div className="text-center p-14">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
           Just-Another-<span className="text-[#1E6AE1]">UI</span>-Library
@@ -14,7 +14,7 @@ export default function Home() {
         <p className="text-md md:text-lg tracking-tighter pb-6">A collection of all my designed cards and components.</p>
         <GitHubButton />
       </div>
-      <div className="grid items-center">
+      <div className="flex flex-col items-center">
         <div className="flex items-center justify-center p-10">
           <StickyHeader />
         </div>
