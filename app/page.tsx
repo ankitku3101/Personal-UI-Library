@@ -6,7 +6,7 @@ import StickyHeader from "@/components/StickyHeader";
 
 export default function Home() {
   return (
-    <div className="bg-custom-gradient">
+    <div className="h-full min-w-full bg-custom-gradient">
       <div className="text-center p-14">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
           Just-Another-<span className="text-[#1E6AE1]">UI</span>-Library
