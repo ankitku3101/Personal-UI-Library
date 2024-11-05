@@ -1,6 +1,6 @@
 import GlassmorphicCard from "@/components/GlassmorphicCard";
 import GradientText from "@/components/GradientText";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
