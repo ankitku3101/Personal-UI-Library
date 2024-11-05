@@ -1,14 +1,13 @@
 import GlassmorphicCard from "@/components/GlassmorphicCard";
 import GradientText from "@/components/GradientText";
 
-
 export default function Home() {
   return (
-    <div className="h-screen grid grid-cols-2 items-center p-20 bg-custom-gradient">
-      <div className="flex items-center justify-center">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2 items-center bg-custom-gradient">
+      <div className="flex items-center justify-center p-4">
         <GradientText />
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center p-4">
         <GlassmorphicCard />
       </div>
     </div>
