@@ -2,7 +2,7 @@ import React from 'react'
 
 function StickyHeader() {
   return (
-    <div className='text-center'>
+    <div className='text-center text-xs md:text-base'>
       <header className='sticky top-0 backdrop-blur-sm z-20'>
           <nav className='gap-6 flex text-white/75 items-center bg-black rounded-full shadow-lg px-6 py-2'>
             <p className='cursor-pointer hover:text-white'>Home</p>
