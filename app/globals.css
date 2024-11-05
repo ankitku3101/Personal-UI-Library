@@ -4,5 +4,5 @@
 
 .bg-custom-gradient {
   background: rgb(246, 249, 251);
-  background: linear-gradient(45deg, rgba(246, 249, 251, 1) 37%, rgba(140, 254, 248, 1) 100%);
+  background: linear-gradient(120deg, rgba(246, 249, 251, 1) 37%, rgba(140, 254, 248, 1) 120%);
 }

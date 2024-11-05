@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+function StickyHeader() {
   return (
     <div className='text-center'>
       <header className='sticky top-0 backdrop-blur-sm z-20'>
@@ -12,9 +12,9 @@ function Header() {
             <p className='cursor-pointer hover:text-white'>Profile</p>
           </nav>
       </header>
-      <p className='p-2'>Sticky Header/Navbar</p>
+      <p className='p-2 tracking-tight'>Sticky Header/Navbar</p>
     </div>
   )
 }
 
-export default Header
+export default StickyHeader
