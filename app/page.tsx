@@ -9,7 +9,7 @@ export default function Home() {
     <div className="h-full bg-custom-gradient">
       <div className="text-center p-14">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
-          Just-Another-UI-Library
+          Just-Another-<span className="text-[#1E6AE1]">UI</span>-Library
         </h1>
         <p className="text-md md:text-lg tracking-tighter pb-6">A collection of all my designed cards and components.</p>
         <GitHubButton />
