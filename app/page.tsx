@@ -2,7 +2,7 @@ import BackgroundGradient from "@/components/BackgroundGradient";
 import GitHubButton from "@/components/GitHubButton";
 import GlassmorphicCard from "@/components/GlassmorphicCard";
 import GradientText from "@/components/GradientText";
-import HoverDropdown from "@/components/HoverDropdown";
+import HoverDropdown, { LinkMenu } from "@/components/HoverDropdown";
 import MovingBorderButton from "@/components/MovingBorderButton";
 import StickyHeader from "@/components/StickyHeader";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
@@ -31,7 +31,12 @@ export default function Home() {
           <MovingBorderButton />
         </div>
         <div className="flex items-center justify-center py-10">
-          <HoverDropdown />
+        <HoverDropdown>
+          <LinkMenu href="/dashboard">Dashboard</LinkMenu>
+          <LinkMenu href="/settings">Settings</LinkMenu>
+          <LinkMenu href="/earnings">Earnings</LinkMenu>
+          <LinkMenu href="/signout">Sign out</LinkMenu>
+        </HoverDropdown>
         </div>
         <div className="flex items-center justify-center py-10">
           <UnderlineAnimation />

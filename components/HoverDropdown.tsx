@@ -1,8 +1,17 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, ReactNode } from 'react';
+import Link from 'next/link';
 
-export default function HoverDropdown() {
+export function LinkMenu({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <Link href={href} className="block px-4 py-2 hover:bg-zinc-900">
+        {children}
+    </Link>
+  );
+}
+
+export default function HoverDropdown({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,43 +48,8 @@ export default function HoverDropdown() {
           isOpen ? 'block' : 'hidden'
         } absolute z-10 divide-y divide-gray-100 shadow w-full bg-zinc-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-45`}
       >
-        <ul className="py-2 text-sm text-white">
-          <li>
-            <a
-              href="#"
-              className="block px-4 py-2 hover:bg-zinc-900"
-            >
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block px-4 py-2 hover:bg-zinc-900"
-            >
-              Settings
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block px-4 py-2 hover:bg-zinc-900"
-            >
-              Earnings
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="block px-4 py-2 hover:bg-zinc-900"
-            >
-              Sign out
-            </a>
-          </li>
-        </ul>
+        <ul className="py-2 text-sm text-white">{children}</ul>
       </div>
     </div>
   );
 }
-
-
