@@ -6,12 +6,18 @@ import Link from 'next/link';
 export function LinkMenu({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Link href={href} className="block px-4 py-2 hover:bg-zinc-900">
-        {children}
+      {children}
     </Link>
   );
 }
 
-export default function HoverDropdown({ children }: { children: ReactNode }) {
+export default function HoverDropdown({
+  children,
+  title = 'Dropdown hover', 
+}: {
+  children: ReactNode;
+  title?: string; 
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,10 +25,10 @@ export default function HoverDropdown({ children }: { children: ReactNode }) {
       <button
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-        className="text-white bg-zinc-700 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+        className="text-inherit focus:ring-4 focus:outline-none focus:ring-zinc-300 inline-flex items-center"
         type="button"
       >
-        Dropdown hover
+        {title} 
         <svg
           className="w-2.5 h-2.5 ml-3"
           aria-hidden="true"
@@ -46,7 +52,8 @@ export default function HoverDropdown({ children }: { children: ReactNode }) {
         onMouseLeave={() => setIsOpen(false)}
         className={`${
           isOpen ? 'block' : 'hidden'
-        } absolute z-10 divide-y divide-gray-100 shadow w-full bg-zinc-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-45`}
+        } absolute z-10 divide-y divide-gray-100 shadow bg-zinc-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-45 min-w-0`}
+        style={{ left: '50%', transform: 'translateX(-50%)' }} 
       >
         <ul className="py-2 text-sm text-white">{children}</ul>
       </div>
