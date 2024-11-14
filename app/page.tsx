@@ -1,4 +1,5 @@
 import BackgroundGradient from "@/components/BackgroundGradient";
+import BlobGradient from "@/components/BlobGradient";
 import GitHubButton from "@/components/GitHubButton";
 import GlassmorphicCard from "@/components/GlassmorphicCard";
 import GradientText from "@/components/GradientText";
@@ -18,6 +19,9 @@ export default function Home() {
         <GitHubButton />
       </div>
       <div className="flex flex-col items-center">
+        <div className="flex items-center justify-center pt-2 pb-10">
+          <BlobGradient />
+        </div>
         <div className="flex items-center justify-center py-10">
           <StickyHeader />
         </div>
