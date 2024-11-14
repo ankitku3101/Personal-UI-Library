@@ -22,7 +22,7 @@ const feelingLabelMap = {
 };
 export default function BlobGradient() {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const [feeling, setFeeling] = useState<Feeling>(Feeling.Neutral);
+  const [feeling, setFeeling] = useState<Feeling>(Feeling.Sad);
 
   useEffect(() => {
     if (!wrapperRef.current) return;
