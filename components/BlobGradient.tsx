@@ -10,7 +10,7 @@ enum Feeling {
 
 const feelingColorMap = {
     [Feeling.Sad]: ["#ff0d0d", "#fc7a6a", "#faa79d"], 
-    [Feeling.Neutral]: ["#00bf00", "#83ff5a", "#beffce"],
+    [Feeling.Neutral]: ["#36d902", "#83ff5a", "#beffce"],
     [Feeling.Happy]: ["#ff8f05", "#ffe83b", "#fcfb86"], 
   };
     
@@ -22,7 +22,7 @@ const feelingLabelMap = {
 };
 export default function BlobGradient() {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const [feeling, setFeeling] = useState<Feeling>(Feeling.Sad);
+  const [feeling, setFeeling] = useState<Feeling>(Feeling.Neutral);
 
   useEffect(() => {
     if (!wrapperRef.current) return;
