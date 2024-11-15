@@ -5,8 +5,10 @@ import GlassmorphicCard from "@/components/GlassmorphicCard";
 import GradientText from "@/components/GradientText";
 import HoverDropdown, { LinkMenu } from "@/components/HoverDropdown";
 import MovingBorderButton from "@/components/MovingBorderButton";
+import ProfileCard from "@/components/ProfileCard";
 import StickyHeader from "@/components/StickyHeader";
 import UnderlineAnimation from "@/components/UnderlineAnimation";
+import ProfilePic from '@/assets/GithubPP.jpeg'
 
 export default function Home() {
   return (
@@ -33,6 +35,14 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center py-10">
           <MovingBorderButton />
+        </div>
+        <div className="flex items-center justify-center py-10">
+              <ProfileCard
+                profileImg={ProfilePic.src}
+                name="Ankit Kumar"
+                designation="Developer"
+                emailId="ankit.ku3101@gmail.com"
+              />
         </div>
         <div className="flex items-center justify-center py-10">
         <HoverDropdown>
